@@ -1,0 +1,96 @@
+.App{
+    display: grid;
+    place-items: center;
+    background-color: hsl(218, 23%, 16%);
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    background-color: hsl(217, 19%, 24%);
+    margin: auto;
+    width: clamp(375px, 37vw, 1440px);
+    @media (max-width: 500px) {
+        width: 90vw;
+        margin-top: 35%;
+    }
+    padding: 2em;
+    border-radius: 10px;
+
+    & .content .text{
+        text-align: center;
+        color: #cee3e9;
+        & #adviceId{
+            letter-spacing: 3px;
+            color: #52ffa8;
+        }
+        & #advice{
+            margin: 1rem auto;
+            font-size: 28px;
+            
+            @media (max-width: 500px) {
+                font-size: 20px;
+            }
+        }
+    }
+    .divider{
+        width: 100%;
+        margin: 1em 0 0.5em;
+        @media (max-width: 500px) {
+            margin: 0.5em 0 0.25em;
+        }
+    }
+    .desktop-img{
+        display: block;
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+    .mobile-img{
+        display: none;
+        @media (max-width: 500px) {
+            display: block;
+        }
+    }
+    .btn{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        border-radius: 50%;
+        border: none;
+        width: 50px;
+        height: 50px;
+        background: #52ffa8;
+        cursor: pointer;
+        
+        &:hover{
+            box-shadow: 0 0 20px #52ffa8;
+        }
+        & .dice{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .attribution{
+        position: absolute;
+        top: 0%;
+        background-color: #2a2a2a;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        color: white;
+        font-size: 10px;
+        & a{
+            text-decoration: none;
+            color: #52ffa8;
+            &:hover{
+                color: salmon;
+            }
+        }
+    }
+}
+
+
